@@ -14,6 +14,16 @@
  *= require_self
  */
 
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+} */
+
+:root {
+}
+
 body {
+  font-size: 18px;
   background-color: rgb(217, 224, 238);
 }

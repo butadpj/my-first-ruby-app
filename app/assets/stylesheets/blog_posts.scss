@@ -1,0 +1,29 @@
+// Place all the styles related to the BlogPosts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.post {
+  padding-bottom: 10em;
+
+  .post-img {
+    object-fit: cover;
+    width: 100%;
+    height: 30rem;
+    margin: 0 auto;
+  }
+
+  .post-title {
+    font-size: 2.5em;
+  }
+
+  .post-description {
+    font-size: 1.3em;
+  }
+
+  .post-content {
+    margin-top: 2em;
+    font-size: 1.2em;
+    white-space: pre-wrap;
+    hyphens: auto;
+  }
+}

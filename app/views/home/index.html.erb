@@ -1,2 +1,30 @@
 <h2>Home page</h2>
+<hr>
+<div class="content mt-5">
+    <h4>Blog Posts</h4>
+    <br>
+    <div class="row">
+        <% for blog in @blog_posts %>
+            <!--  Your Code Here  -->
+            <div class="col mb-3">
+                <div class="card" style="width: 18rem;">
+                    <% if blog.preview_image.attached? %>
+                        <img class="card-img-top" src="<%= url_for(blog.preview_image) %>" alt="Post image preview">
+                    <% end %>
+                    
+                    <div class="card-body">
+                        <h5 class="card-title"><%= blog.title%></h5>
+                        <p class="card-text"><%= blog.description%></p>
+                        <a href="blog_posts/<%= blog.id%>" class="btn btn-primary">View post</a>
+                    </div>
+                </div>
+            </div>
+        <% end %>
 
+       
+ 
+       
+        
+    </div>
+    
+</div>

@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+ 
+<% if false %>
+
+<p>
+  <strong>Preview Image:</strong>
+  <% if @blog_post.preview_image.attached? %>
+    <%= image_tag @blog_post.preview_image, class: "preview-img"  %>
+  <% end %>
+
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @blog_post.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @blog_post.description %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @blog_post.content %>
+</p>
+
+<%= link_to 'Edit', edit_blog_post_path(@blog_post) %> |
+<%= link_to 'Back', blog_posts_path %>  
+
+<% end %>
+
+<article class="post d-flex flex-column">
+
+    <% if @blog_post.preview_image.attached? %>
+      <%= image_tag @blog_post.preview_image, class: "post-img rounded img-fluid"  %>
+    <% end %>
+
+    <h2 class="post-title mt-5"><%= @blog_post.title %></h2>
+    <p class="post-description"><%= @blog_post.description %></p>
+    <hr>
+
+    <div class="post-content"><%= @blog_post.content %></div>
+  
+
+
+</article>
